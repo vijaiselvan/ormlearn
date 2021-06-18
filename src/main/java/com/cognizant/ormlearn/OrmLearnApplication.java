@@ -32,4 +32,33 @@ public class OrmLearnApplication {
 			logger.info("END...");
 		};
 	}
+	
+	@Bean
+	CommandLineRunner addCountry(CountryService countryService) {
+		return args -> {
+			logger.info("START...");
+			countryService.addCountry(new Country("UAE", "United Arab Emirates"));
+			logger.info("END...");
+		};
+	}
+	
+	@Bean
+	CommandLineRunner deleteCountryByCode(CountryService countryService) {
+		return args -> {
+			logger.info("START");
+			countryService.deleteCountry("CA");
+			logger.info("END");
+		};
+	}
+	
+	@Bean
+	CommandLineRunner findCountryByCode(CountryService countryService) {
+		return args -> {
+			logger.info("START");
+			Country country = countryService.findCountryByCode("CA");
+			logger.debug("Country : {}", country);
+			logger.info("END");
+		};
+	}
+	
 }
