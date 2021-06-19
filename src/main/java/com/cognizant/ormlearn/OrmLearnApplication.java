@@ -52,6 +52,15 @@ public class OrmLearnApplication {
 	}
 	
 	@Bean
+	CommandLineRunner updateCountry(CountryService countryService) {
+		return args -> {
+			logger.info("START");
+			countryService.updateCountry("AF","Andrea");
+			logger.info("END");
+		};
+	}
+
+	@Bean
 	CommandLineRunner findCountryByCode(CountryService countryService) {
 		return args -> {
 			logger.info("START");
@@ -60,5 +69,7 @@ public class OrmLearnApplication {
 			logger.info("END");
 		};
 	}
+	
+	
 	
 }

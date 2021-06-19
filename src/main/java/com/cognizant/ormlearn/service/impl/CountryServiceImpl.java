@@ -33,6 +33,13 @@ public class CountryServiceImpl implements CountryService {
 	public void deleteCountry(String code) {
 		repository.deleteById(code);
 	}
+	
+	@Override
+	public void updateCountry(String code, String name) {
+		Country country = repository.findById(code).get();
+		country.setName(name);
+		repository.save(country);
+	}
 
 	public Country findCountryByCode(String countryCode) throws CountryNotFoundException {
 
