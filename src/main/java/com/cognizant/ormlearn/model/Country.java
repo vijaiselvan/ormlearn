@@ -23,7 +23,7 @@ public class Country {
 	@Id
 	@Column(name = "co_code")
 	private String code;
-	
+
 	@NonNull
 	@Column(name = "co_name")
 	private String name;

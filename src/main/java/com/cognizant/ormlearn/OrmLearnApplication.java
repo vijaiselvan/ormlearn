@@ -26,6 +26,7 @@ public class OrmLearnApplication {
 	}
 
 	/************ COUNTRY *************/
+//  a test method to get all countries from service.
 	@Bean
 	CommandLineRunner getAllCountries(CountryService countryService) {
 		return args -> {
@@ -36,6 +37,18 @@ public class OrmLearnApplication {
 		};
 	}
 
+//	Find a country based on country code
+	@Bean
+	CommandLineRunner findCountryByCode(CountryService countryService) {
+		return args -> {
+			logger.info("START");
+			Country country = countryService.findCountryByCode("CA");
+			logger.debug("Country : {}", country);
+			logger.info("END");
+		};
+	}
+
+//	Add a new country
 	@Bean
 	CommandLineRunner addCountry(CountryService countryService) {
 		return args -> {
@@ -45,6 +58,7 @@ public class OrmLearnApplication {
 		};
 	}
 
+//	Delete a country based on code
 	@Bean
 	CommandLineRunner deleteCountryByCode(CountryService countryService) {
 		return args -> {
@@ -54,6 +68,7 @@ public class OrmLearnApplication {
 		};
 	}
 
+//	Update a country based on code
 	@Bean
 	CommandLineRunner updateCountry(CountryService countryService) {
 		return args -> {
@@ -63,13 +78,35 @@ public class OrmLearnApplication {
 		};
 	}
 
+//	method to search the countries with single char
 	@Bean
-	CommandLineRunner findCountryByCode(CountryService countryService) {
+	CommandLineRunner testSearchCountryWithSingleChar(CountryService countryService) {
 		return args -> {
-			logger.info("START");
-			Country country = countryService.findCountryByCode("CA");
-			logger.debug("Country : {}", country);
-			logger.info("END");
+			logger.info("Start");
+			try {
+				List<Country> countryList = countryService.searchCountry("A");
+				logger.debug("Countries={}", countryList);
+
+			} catch (Exception e) {
+				logger.error("message={}", e.getMessage());
+			}
+			logger.info("End");
+		};
+	}
+
+//	method to return the countries in ascending order
+	@Bean
+	CommandLineRunner testSortCountry(CountryService countryService) {
+		return args -> {
+			logger.info("Start");
+			try {
+
+				List<Country> countryList = countryService.sortCountry("OU");
+				logger.debug("Countries={}", countryList);
+			} catch (Exception e) {
+				logger.error("message={}", e.getMessage());
+			}
+			logger.info("End");
 		};
 	}
 
