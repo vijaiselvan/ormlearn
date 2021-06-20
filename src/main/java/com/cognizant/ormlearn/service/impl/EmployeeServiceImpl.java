@@ -27,10 +27,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public void save(Employee employee) {
 		repository.save(employee);
 	}
-	
+
 	@Override
 	public List<Employee> getAllPermanentEmployees() {
 		return repository.getAllPermanentEmployees();
+	}
+
+	@Override
+	public Double getAverageSalary(Integer id) {
+		Double averageSalary = repository.getAverageSalary(id);
+		return averageSalary;
 	}
 
 }

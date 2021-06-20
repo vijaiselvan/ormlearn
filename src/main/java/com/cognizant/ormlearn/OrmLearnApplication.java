@@ -166,7 +166,7 @@ public class OrmLearnApplication {
 			logger.info("End");
 		};
 	}
-	
+
 	/************ EMPLOYEE *************/
 //	Getting Employee along with Department
 	@Bean
@@ -176,7 +176,7 @@ public class OrmLearnApplication {
 			Employee employee = employeeService.get(1);
 			logger.debug("Employee:{}", employee);
 			logger.debug("Department:{}", employee.getDepartment());
-	        logger.debug("Skills:{}",employee.getSkillList());
+			logger.debug("Skills:{}", employee.getSkillList());
 			logger.info("End");
 		};
 	}
@@ -247,16 +247,27 @@ public class OrmLearnApplication {
 			logger.info("END");
 		};
 	}
-	
+
 //	Get all permanent employees using HQL
 	@Bean
 	CommandLineRunner testGetAllPermanentEmployees(EmployeeService employeeService) {
 		return args -> {
 			logger.info("START");
 			List<Employee> employees = employeeService.getAllPermanentEmployees();
-			logger.debug("Permanent Employees:{}",employees);
+			logger.debug("Permanent Employees:{}", employees);
 			employees.forEach(employee -> logger.debug("Skills:{}", employee.getSkillList()));
 			logger.info("END");
+		};
+	}
+
+//	Get average salary using HQL
+	@Bean
+	CommandLineRunner testGetAverageSalary(EmployeeService employeeService) {
+		return args -> {
+			logger.info("Start");
+			Double averageSalary = employeeService.getAverageSalary(3);
+			logger.debug("Average Salary:{}", averageSalary);
+			logger.info("End");
 		};
 	}
 

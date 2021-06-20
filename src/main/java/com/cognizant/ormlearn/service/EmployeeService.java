@@ -9,6 +9,8 @@ public interface EmployeeService {
 	public Employee get(int id);
 
 	public void save(Employee employee);
-	
+
 	public List<Employee> getAllPermanentEmployees();
+
+	public Double getAverageSalary(Integer id);
 }
