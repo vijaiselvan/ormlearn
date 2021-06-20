@@ -247,5 +247,17 @@ public class OrmLearnApplication {
 			logger.info("END");
 		};
 	}
+	
+//	Get all permanent employees using HQL
+	@Bean
+	CommandLineRunner testGetAllPermanentEmployees(EmployeeService employeeService) {
+		return args -> {
+			logger.info("START");
+			List<Employee> employees = employeeService.getAllPermanentEmployees();
+			logger.debug("Permanent Employees:{}",employees);
+			employees.forEach(employee -> logger.debug("Skills:{}", employee.getSkillList()));
+			logger.info("END");
+		};
+	}
 
 }

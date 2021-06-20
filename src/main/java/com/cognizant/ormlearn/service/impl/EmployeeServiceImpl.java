@@ -1,5 +1,7 @@
 package com.cognizant.ormlearn.service.impl;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public void save(Employee employee) {
 		repository.save(employee);
+	}
+	
+	@Override
+	public List<Employee> getAllPermanentEmployees() {
+		return repository.getAllPermanentEmployees();
 	}
 
 }
