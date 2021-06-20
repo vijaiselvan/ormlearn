@@ -39,4 +39,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return averageSalary;
 	}
 
+	@Override
+	public List<Employee> getAllEmployeesNative() {
+		List<Employee> employees = repository.getAllEmployeesNative();
+		return employees;
+	}
+
 }

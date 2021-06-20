@@ -271,4 +271,15 @@ public class OrmLearnApplication {
 		};
 	}
 
+//	Get all employees using Native Query
+	@Bean
+	CommandLineRunner testgetAllEmployeesNative(EmployeeService employeeService) {
+		return args -> {
+			logger.info("START");
+			List<Employee> employees = employeeService.getAllEmployeesNative();
+			logger.debug("Employees:{}", employees);
+			logger.info("END");
+		};
+	}
+
 }

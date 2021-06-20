@@ -13,4 +13,6 @@ public interface EmployeeService {
 	public List<Employee> getAllPermanentEmployees();
 
 	public Double getAverageSalary(Integer id);
+	
+	public List<Employee> getAllEmployeesNative();
 }
