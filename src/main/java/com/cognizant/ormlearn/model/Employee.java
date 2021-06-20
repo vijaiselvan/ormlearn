@@ -1,5 +1,6 @@
 package com.cognizant.ormlearn.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Set;
 
@@ -13,17 +14,17 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.DynamicUpdate;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-import lombok.Data;
-
-@Data
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name = "employee")
-@DynamicUpdate
 public class Employee {
 
 	@Id
@@ -34,8 +35,8 @@ public class Employee {
 	@Column(name = "em_name")
 	private String name;
 
-	@Column(name = "em_salary", columnDefinition = "decimal", precision = 10, scale = 2)
-	private double salary;
+	@Column(name = "em_salary")
+	private BigDecimal salary;
 
 	@Column(name = "em_permanent")
 	private boolean permanent;
@@ -47,11 +48,8 @@ public class Employee {
 	@JoinColumn(name = "em_dp_id")
 	private Department department;
 
-	@OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
-	private Set<Employee> employeeList;
-
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
+	@ToString.Exclude
 	@JoinTable(name = "employee_skill", joinColumns = @JoinColumn(name = "es_em_id"), inverseJoinColumns = @JoinColumn(name = "es_sk_id"))
-
 	private Set<Skill> skillList;
 }

@@ -11,9 +11,13 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name = "department")
 public class Department {
@@ -27,6 +31,7 @@ public class Department {
 	private String name;
 
 	@OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
+	@ToString.Exclude
 	private Set<Employee> employeeList;
 
 }
