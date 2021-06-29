@@ -1,4 +1,4 @@
-package com.cognizant.ormlearn;
+package com.vijay.ormlearn;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
