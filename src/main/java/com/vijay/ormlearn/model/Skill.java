@@ -1,4 +1,4 @@
-package com.cognizant.ormlearn.model;
+package com.vijay.ormlearn.model;
 
 import java.util.Set;
 
@@ -8,7 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -19,19 +19,18 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
-@Table(name = "department")
-public class Department {
+@Table(name = "skill")
+public class Skill {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "dp_id")
+	@Column(name = "sk_id")
 	private int id;
 
-	@Column(name = "dp_name")
+	@Column(name = "sk_name")
 	private String name;
 
-	@OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
+	@ManyToMany(mappedBy = "skillList", fetch = FetchType.EAGER)
 	@ToString.Exclude
 	private Set<Employee> employeeList;
-
 }

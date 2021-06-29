@@ -1,6 +1,6 @@
-package com.cognizant.ormlearn.service;
+package com.vijay.ormlearn.service;
 
-import com.cognizant.ormlearn.model.Department;
+import com.vijay.ormlearn.model.Department;
 
 public interface DepartmentService {
 

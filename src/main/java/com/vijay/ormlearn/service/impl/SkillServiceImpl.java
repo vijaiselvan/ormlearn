@@ -1,13 +1,13 @@
-package com.cognizant.ormlearn.service.impl;
+package com.vijay.ormlearn.service.impl;
 
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cognizant.ormlearn.model.Skill;
-import com.cognizant.ormlearn.repository.SkillRepository;
-import com.cognizant.ormlearn.service.SkillService;
+import com.vijay.ormlearn.model.Skill;
+import com.vijay.ormlearn.repository.SkillRepository;
+import com.vijay.ormlearn.service.SkillService;
 
 @Service
 @Transactional

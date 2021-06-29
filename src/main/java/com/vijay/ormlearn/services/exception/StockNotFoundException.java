@@ -1,4 +1,4 @@
-package com.cognizant.ormlearn.services.exception;
+package com.vijay.ormlearn.services.exception;
 
 public class StockNotFoundException extends Exception{
 

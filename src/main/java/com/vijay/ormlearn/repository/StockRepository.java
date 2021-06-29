@@ -1,4 +1,4 @@
-package com.cognizant.ormlearn.repository;
+package com.vijay.ormlearn.repository;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.cognizant.ormlearn.model.Stock;
+import com.vijay.ormlearn.model.Stock;
 
 @Repository
 public interface StockRepository extends JpaRepository<Stock, String> {

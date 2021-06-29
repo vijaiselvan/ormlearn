@@ -1,9 +1,20 @@
-package com.cognizant.ormlearn;
+package com.vijay.ormlearn;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import com.vijay.ormlearn.model.Country;
+import com.vijay.ormlearn.model.Department;
+import com.vijay.ormlearn.model.Employee;
+import com.vijay.ormlearn.model.Skill;
+import com.vijay.ormlearn.model.Stock;
+import com.vijay.ormlearn.service.CountryService;
+import com.vijay.ormlearn.service.DepartmentService;
+import com.vijay.ormlearn.service.EmployeeService;
+import com.vijay.ormlearn.service.SkillService;
+import com.vijay.ormlearn.service.StockService;
 
 import java.math.BigDecimal;
 import java.text.ParseException;
@@ -13,17 +24,6 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.cognizant.ormlearn.model.Country;
-import com.cognizant.ormlearn.model.Department;
-import com.cognizant.ormlearn.model.Employee;
-import com.cognizant.ormlearn.model.Skill;
-import com.cognizant.ormlearn.model.Stock;
-import com.cognizant.ormlearn.service.CountryService;
-import com.cognizant.ormlearn.service.DepartmentService;
-import com.cognizant.ormlearn.service.EmployeeService;
-import com.cognizant.ormlearn.service.SkillService;
-import com.cognizant.ormlearn.service.StockService;
 
 @SpringBootApplication
 public class OrmLearnApplication {

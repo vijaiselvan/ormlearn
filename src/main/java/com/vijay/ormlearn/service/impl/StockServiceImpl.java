@@ -1,6 +1,5 @@
-package com.cognizant.ormlearn.service.impl;
+package com.vijay.ormlearn.service.impl;
 
-import com.cognizant.ormlearn.service.StockService;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -9,8 +8,9 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cognizant.ormlearn.model.Stock;
-import com.cognizant.ormlearn.repository.StockRepository;
+import com.vijay.ormlearn.model.Stock;
+import com.vijay.ormlearn.repository.StockRepository;
+import com.vijay.ormlearn.service.StockService;
 
 @Service
 public class StockServiceImpl implements StockService {

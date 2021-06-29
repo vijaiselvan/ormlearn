@@ -1,4 +1,4 @@
-package com.cognizant.ormlearn.service.impl;
+package com.vijay.ormlearn.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,10 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.cognizant.ormlearn.model.Country;
-import com.cognizant.ormlearn.repository.CountryRepository;
-import com.cognizant.ormlearn.service.CountryService;
-import com.cognizant.ormlearn.services.exception.CountryNotFoundException;
+import com.vijay.ormlearn.model.Country;
+import com.vijay.ormlearn.repository.CountryRepository;
+import com.vijay.ormlearn.service.CountryService;
+import com.vijay.ormlearn.services.exception.CountryNotFoundException;
 
 @Transactional()
 @Service()

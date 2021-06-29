@@ -1,4 +1,4 @@
-package com.cognizant.ormlearn.model;
+package com.vijay.ormlearn.model;
 
 import java.sql.Date;
 import java.math.BigDecimal;

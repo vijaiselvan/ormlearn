@@ -1,8 +1,8 @@
-package com.cognizant.ormlearn.service;
+package com.vijay.ormlearn.service;
 
 import java.util.List;
 
-import com.cognizant.ormlearn.model.Employee;
+import com.vijay.ormlearn.model.Employee;
 
 public interface EmployeeService {
 

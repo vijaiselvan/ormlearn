@@ -1,6 +1,6 @@
-package com.cognizant.ormlearn.service;
+package com.vijay.ormlearn.service;
 
-import com.cognizant.ormlearn.model.Skill;
+import com.vijay.ormlearn.model.Skill;
 
 public interface SkillService {
 

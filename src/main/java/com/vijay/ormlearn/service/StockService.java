@@ -1,9 +1,9 @@
-package com.cognizant.ormlearn.service;
+package com.vijay.ormlearn.service;
 
 import java.util.List;
 
-import com.cognizant.ormlearn.model.Stock;
-import com.cognizant.ormlearn.services.exception.StockNotFoundException;
+import com.vijay.ormlearn.model.Stock;
+import com.vijay.ormlearn.services.exception.StockNotFoundException;
 
 public interface StockService {
 

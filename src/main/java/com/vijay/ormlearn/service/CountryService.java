@@ -1,8 +1,9 @@
-package com.cognizant.ormlearn.service;
+package com.vijay.ormlearn.service;
 
 import java.util.List;
-import com.cognizant.ormlearn.model.Country;
-import com.cognizant.ormlearn.services.exception.CountryNotFoundException;
+
+import com.vijay.ormlearn.model.Country;
+import com.vijay.ormlearn.services.exception.CountryNotFoundException;
 
 public interface CountryService {
 

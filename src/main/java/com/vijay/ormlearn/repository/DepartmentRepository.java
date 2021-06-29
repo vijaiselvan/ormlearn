@@ -1,9 +1,9 @@
-package com.cognizant.ormlearn.repository;
+package com.vijay.ormlearn.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.cognizant.ormlearn.model.Department;
+import com.vijay.ormlearn.model.Department;
 
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department, Integer> {
